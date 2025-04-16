@@ -1,0 +1,17 @@
+hf.aibsd.com {
+    handle /* {
+        reverse_proxy https://huggingface.co {
+            # header_up Accept-Encoding identity
+            header_up Host {upstream_hostport}
+        }
+    }
+}
+
+github.aibsd.com {
+    handle /* {
+        reverse_proxy https://github.com {
+            # header_up Accept-Encoding identity
+            header_up Host {upstream_hostport}
+        }
+    }
+}
